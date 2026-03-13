@@ -8,8 +8,12 @@
 <title>March For Jesus</title>
 
 <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer">
 
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=League+Gothic&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Space+Mono&display=swap" rel="stylesheet">
 
 </head>
 
@@ -21,16 +25,57 @@
 
 <div class="nav-inner">
 
-<div class="logo">MARCH FOR JESUS</div>
+<a href="index.html" class="logo">MFJ</a>
 
-<nav>
+<button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="main-menu">
+<span></span>
+<span></span>
+<span></span>
+</button>
 
-<a href="#gallery">Gallery</a>
-<a href="#about">About</a>
-<a href="#signup">Sign Up</a>
-<a href="#schedule">Schedule</a>
+<nav class="menu" id="main-menu">
+
+<ul>
+
+<li class="dropdown">
+<a href="#">Home Page</a>
+<ul class="dropdown-menu">
+<li><a href="#about">About & Video Promo</a></li>
+<li><a href="#gallery">Gallery</a></li>
+</ul>
+</li>
+
+<li class="dropdown">
+<a href="#signup">Join Us</a>
+<ul class="dropdown-menu">
+<li><a href="#signup">Sign Up</a></li>
+<li><a href="https://chat.whatsapp.com/G6m8cG5FMAm8tozPNGQFvW">WhatsApp Community</a></li>
+</ul>
+</li>
+
+<li class="dropdown">
+<a href="#">Logistics</a>
+<ul class="dropdown-menu">
+<li><a href="#route">Route</a></li>
+<li><a href="#schedule">Schedule</a></li>
+</ul>
+</li>
+
+<li class="dropdown">
 <a href="#support">Support</a>
+<ul class="dropdown-menu">
+</ul>
+</li>
+
+<li class="dropdown">
 <a href="#contact">Contact</a>
+<ul class="dropdown-menu">
+<li><a href="#faq">FAQs</a></li>
+
+</ul>
+</li>
+
+</ul>
 
 </nav>
 
@@ -46,32 +91,39 @@
 
 <div class="hero-content">
 
+<div class="countdown">
+
+<div class="countdown-grid">
+
+<div class="countdown-item">
+<div class="label">DAYS</div>
+<div id="days" class="number">00</div>
+</div>
+
+<div class="countdown-item">
+<div class="label">HOURS</div>
+<div id="hours" class="number">00</div>
+</div>
+
+<div class="countdown-item">
+<div class="label">MINUTES</div>
+<div id="minutes" class="number">00</div>
+</div>
+
+<div class="countdown-item">
+<div class="label">SECONDS</div>
+<div id="seconds" class="number">00</div>
+</div>
+
+</div>
+
+</div>
+
 <h1>MARCH FOR JESUS</h1>
 
 <div class="hero-date">MAY 16TH</div>
 
 <div class="hero-location">BELFAST</div>
-
-<div id="countdown" class="countdown"></div>
-
-</div>
-
-</section>
-
-<!-- GALLERY -->
-
-<section id="gallery" class="gallery">
-
-<h2>GALLERY</h2>
-
-<div class="gallery-grid">
-
-<img src="images/gallery 1.jpg">
-<img src="images/gallery 2.jpg">
-<img src="images/gallery 3.jpg">
-<img src="images/gallery 4.jpg">
-<img src="images/gallery 5.jpg">
-<img src="images/gallery 6.jpg">
 
 </div>
 
@@ -81,13 +133,26 @@
 
 <section class="watch">
 
-<img src="images/gallery2.jpg">
+<iframe width="800" height="450" src="https://www.youtube.com/embed/uUKdgvMIN2U?si=VSTC1YUl_0l95TBL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-<h3>WATCH</h3>
+<div class="watch-stats">
+
+<div class="stat">
+<h3 class="counter" data-target="8000">0</h3>
+<p>Attendees in Belfast 2025</p>
+</div>
+
+<div class="stat">
+<h3 class="counter" data-target="25000">0</h3>
+<p>Attendees in Dublin 2025</p>
+</div>
+
+</div>
+
 
 <div class="watch-buttons">
 
-<a class="btn">8,000+ Attendees in Belfast 2025</a>
+<a href="https://www.youtube.com/watch?v=uUKdgvMIN2U" target="_blank" class="btn">Watch Full Video</a>
 
 </div>
 
@@ -95,7 +160,7 @@
 
 <!-- ABOUT -->
 
-<section id="about" class="about">
+<section id="about" class="about animate">
 
 <div class="about-text">
 
@@ -115,8 +180,153 @@ Christ in the heart of Belfast.
 
 <div class="about-images">
 
-<img src="images/gallery1.jpg">
-<img src="images/gallery2.jpg">
+<div class="about-main">
+<img src="images/MFJ New Edits/about1.jpg" alt="March for Jesus">
+
+<img src="images/MFJ New Edits/about2.jpg" class="about-overlay top-left">
+<img src="images/MFJ New Edits/about3.jpg" class="about-overlay bottom-right">
+
+</div>
+
+</div>
+
+</section>
+
+<!-- GALLERY -->
+
+<section id="gallery" class="gallery">
+
+<h2>GALLERY</h2>
+
+<div class="gallery-grid">
+
+<a href="images/MFJ New Edits/gallery1.jpg">
+<img src="images/MFJ New Edits/gallery1.jpg">
+</a>
+
+<a href="images/MFJ New Edits/gallery2.jpg">
+<img src="images/MFJ New Edits/gallery2.jpg">
+</a>
+
+<a href="images/MFJ New Edits/gallery3.jpg">
+<img src="images/MFJ New Edits/gallery3.jpg">
+</a>
+
+<a href="images/MFJ New Edits/gallery4.jpg">
+<img src="images/MFJ New Edits/gallery4.jpg">
+</a>
+
+<a href="images/MFJ New Edits/gallery5.jpg">
+<img src="images/MFJ New Edits/gallery5.jpg">
+</a>
+
+<a href="images/MFJ New Edits/gallery6.jpg">
+<img src="images/MFJ New Edits/gallery6.jpg">
+</a>
+
+<a href="images/MFJ New Edits/gallery7.jpg">
+<img src="images/MFJ New Edits/gallery7.jpg">
+</a>
+
+<a href="images/MFJ New Edits/gallery8.jpg">
+<img src="images/MFJ New Edits/gallery8.jpg">
+</a>
+
+<a href="images/MFJ New Edits/gallery9.jpg">
+<img src="images/MFJ New Edits/gallery9.jpg">
+</a>
+
+<a href="images/MFJ New Edits/gallery10.jpg">
+<img src="images/MFJ New Edits/gallery10.jpg">
+</a>
+
+<a href="images/MFJ New Edits/gallery11.jpg">
+<img src="images/MFJ New Edits/gallery11.jpg">
+</a>
+
+<a href="images/MFJ New Edits/gallery12.jpg">
+<img src="images/MFJ New Edits/gallery12.jpg">
+</a>
+
+<a href="images/MFJ New Edits/gallery13.jpg">
+<img src="images/MFJ New Edits/gallery13.jpg">
+</a>
+
+<a href="images/MFJ New Edits/gallery14.jpg">
+<img src="images/MFJ New Edits/gallery14.jpg">
+</a>
+
+<a href="images/MFJ New Edits/gallery15.jpg">
+<img src="images/MFJ New Edits/gallery15.jpg">
+</a>
+
+<a href="images/MFJ New Edits/gallery16.jpg">
+<img src="images/MFJ New Edits/gallery16.jpg">
+</a>
+
+<a href="images/MFJ New Edits/gallery17.jpg">
+<img src="images/MFJ New Edits/gallery17.jpg">
+</a>
+
+<a href="images/MFJ New Edits/gallery18.jpg">
+<img src="images/MFJ New Edits/gallery18.jpg">
+</a>
+
+<a href="images/MFJ New Edits/gallery19.jpg">
+<img src="images/MFJ New Edits/gallery19.jpg">
+</a>
+
+<a href="images/MFJ New Edits/gallery20.jpg">
+<img src="images/MFJ New Edits/gallery20.jpg">
+</a>
+
+<a href="images/MFJ New Edits/gallery21.jpg">
+<img src="images/MFJ New Edits/gallery21.jpg">
+</a>
+
+<a href="images/MFJ New Edits/gallery22.jpg">
+<img src="images/MFJ New Edits/gallery22.jpg">
+</a>
+
+<a href="images/MFJ New Edits/gallery23.jpg">
+<img src="images/MFJ New Edits/gallery23.jpg">
+</a>
+
+<a href="images/MFJ New Edits/gallery24.jpg">
+<img src="images/MFJ New Edits/gallery24.jpg">
+</a>
+
+<a href="images/MFJ New Edits/gallery25.jpg">
+<img src="images/MFJ New Edits/gallery25.jpg">
+</a>
+
+<a href="images/MFJ New Edits/gallery26.jpg">
+<img src="images/MFJ New Edits/gallery26.jpg">
+</a>
+
+<a href="images/MFJ New Edits/gallery27.jpg">
+<img src="images/MFJ New Edits/gallery27.jpg">
+</a>
+
+<a href="images/MFJ New Edits/gallery28.jpg">
+<img src="images/MFJ New Edits/gallery28.jpg">
+</a>
+
+<a href="images/MFJ New Edits/gallery29.jpg">
+<img src="images/MFJ New Edits/gallery29.jpg">
+</a>
+
+<a href="images/MFJ New Edits/gallery30.jpg">
+<img src="images/MFJ New Edits/gallery30.jpg">
+</a>
+
+<a href="images/MFJ New Edits/gallery31.jpg">
+<img src="images/MFJ New Edits/gallery31.jpg">
+</a>
+
+<a href="images/MFJ New Edits/gallery32.jpg">
+<img src="images/MFJ New Edits/gallery32.jpg">
+</a>
 
 </div>
 
@@ -124,26 +334,38 @@ Christ in the heart of Belfast.
 
 <!-- SIGN UP -->
 
-<section id="signup" class="signup">
+<section id="signup" class="signup light-section animate">
 
 <h2>SIGN UP</h2>
 
 <div class="signup-grid">
 
-<div class="signup-card">
-<img src="images/gallery1.jpg">
-<h3>JOIN THE WORSHIP MARSHAL</h3>
-</div>
+<a href="https://forms.office.com/pages/responsepage.aspx?id=f6y-zCtfL06W-3G7pTXM80XNXBBElOJOidB1jDxM-LVUOEpZSjRPREhKUUtBRDE1SklaT0k2RTdXQi4u&route=shorturl" target="_blank" class="signup-card">
 
-<div class="signup-card">
-<img src="images/gallery2.jpg">
-<h3>SIGN UP TO MARCH</h3>
-</div>
+<img src="images/MFJ New Edits/signup1.jpg">
+<h3>Sign up to become a Marshall</h3>
+<p>Click to apply</p>
+<button class="signup-btn">Apply</button>
 
-<div class="signup-card">
-<img src="images/gallery3.jpg">
-<h3>VOLUNTEER WITH US</h3>
-</div>
+</a>
+
+<a href="https://www.eventbrite.ie/e/march-for-jesus-belfast-2026-tickets-1984903487764?aff=oddtdtcreator" target="_blank" class="signup-card">
+
+<img src="images/MFJ New Edits/signup2.jpg">
+<h3>Sign up to attend</h3>
+<p>Register for the march</p>
+<button class="signup-btn">Apply</button>
+
+</a>
+
+<a href="https://forms.office.com/Pages/ResponsePage.aspx?id=f6y-zCtfL06W-3G7pTXM82CVYKlavfFOlvnuDnu6lV1UNFhGSkpUTUJOUjhPRUpWTjhEVUVISkVITy4u" target="_blank" class="signup-card">
+
+<img src="images/MFJ New Edits/signup3.jpg">
+<h3>Collaborate with us</h3>
+<p>Partner with the event</p>
+<button class="signup-btn">Apply</button>
+
+</a>
 
 </div>
 
@@ -151,25 +373,43 @@ Christ in the heart of Belfast.
 
 <!-- SCHEDULE -->
 
-<section id="schedule" class="schedule">
+<section id="schedule" class="schedule animate">
 
 <h2>SCHEDULE</h2>
 
 <div class="schedule-grid">
 
 <div>
-<h3>1:00PM - 2:00PM</h3>
-<p>Prayer gathering and worship.</p>
+<h3>10:00AM - 2:00PM</h3>
+<h3>ORMEAU PARK GATHERING (BT68LT)</h3>
+<p>Please join us in the area opposite the Ozone Complex in
+Ormeau Park! The day begins with a relaxed time of
+community and fellowship with friends and families before
+the march starts. Enjoy a welcoming atmosphere with a
+variety of food trucks and refreshments and a time to
+connect with others and build community.
+</p>
 </div>
 
 <div>
-<h3>2:00PM</h3>
-<p>March begins through Belfast city.</p>
+<h3>2:00PM - 2:50PM</h3>
+<h3>MARCH BEGINS</h3>
+<p>The march will officially begin, departing from the fields
+opposite the OZONE COMPLEX of Ormeau Park and proceeding
+down the ORMEAU EMBANKMENT  into the city towards Belfast
+City Hall. We will walk together in unity, lifting
+ up the Name of Jesus!</p>
 </div>
 
 <div>
-<h3>3:00PM</h3>
-<p>Celebration and worship.</p>
+<h3>3:00PM - 5:00PM</h3>
+<h3>BELFAST City Hall EVENT (BT15GS)</h3>
+<p>The event will conclude with a gathering in front of  Belfast City
+ Hall, featuring a time of worship, testimonies and corporate
+prayer for the city and the nation. All attendees are encouraged
+to stay and take part in this powerful gathering of Christians
+from across the land!
+</p>
 </div>
 
 </div>
@@ -178,39 +418,55 @@ Christ in the heart of Belfast.
 
 <!-- ROUTE -->
 
-<section class="route">
+<section id="route" class="route">
 
-<h2>THE PARADE ROUTE</h2>
+<h2> MARCH ROUTE</h2>
 
-<img src="images/map.jpg">
+<img src="../images/MFJ New Edits/map.png">
 
 </section>
 
 <!-- SUPPORT -->
 
-<section id="support" class="support">
+<section id="support" class="support animate">
 
-<div>
+<div class="support-image">
 
-<img src="images/gallery2.jpg">
+<img src="images/MFJ New Edits/support.jpg" alt="Support March for Jesus">
 
 </div>
 
-<div>
+<div class="support-card">
 
 <h2>SUPPORT</h2>
 
-<p>
-Account Name: Christian Voice Ireland
+<p class="support-intro">
+Help support the March for Jesus Belfast event and the mission to
+publicly celebrate the name of Jesus across the city.
 </p>
 
-<p>
-BIC: AIBKIE2DXXX
-</p>
+<div class="bank-details">
 
-<p>
-IBAN: IE91 AIBK
-</p>
+<h3>Bank Transfer</h3>
+
+<p><strong>Account Name</strong><br>
+Christian Voice Ireland</p>
+
+<p><strong>BIC</strong><br>
+AIBKIE2DXXX</p>
+
+<p><strong>IBAN</strong><br>
+IE71 AIBK 9312 3365 2800 88</p>
+
+</div>
+
+<a href="https://www.paypal.com/donate/?hosted_button_id=HPGSHDVLVRZ2W"
+target="_blank"
+class="support-btn">
+
+Donate via PayPal
+
+</a>
 
 </div>
 
@@ -218,27 +474,76 @@ IBAN: IE91 AIBK
 
 <!-- CONTACT -->
 
-<section id="contact" class="contact">
+<section id="contact" class="contact animate">
 
-<h2>CONTACT US</h2>
+<div class="contact-wrapper">
 
-<form>
+<h2 class="contact-title">CONTACT US</h2>
 
-<input placeholder="First Name">
-<input placeholder="Last Name">
-<input placeholder="Email">
+<div class="contact-grid">
+
+<div class="contact-info">
+
+<h3>Get in Touch</h3>
+
+<p>
+Have questions about the march, want to volunteer, or just want to say hello?
+Reach out to us anytime.
+</p>
+
+<p class="contact-email">
+information@marchforjesus.co.uk
+</p>
+
+<hr>
+
+<div class="signup-updates">
+
+<h3>Sign Up for Updates</h3>
+
+<p>
+Be the first to hear about march details,
+route announcements, and event-day logistics.
+</p>
+
+<div class="ml-embedded" data-form="XXXXXX"></div>
+
+</div>
+
+<p>
+We would love to hear from you!
+</p>
+
+</div>
+
+
+<form class="contact-form">
+
+<div class="form-row">
+<input type="text" placeholder="First Name">
+<input type="text" placeholder="Last Name">
+</div>
+
+<div class="form-row">
+<input type="email" placeholder="Email">
+<input type="tel" placeholder="Phone Number">
+</div>
 
 <textarea placeholder="Your Message"></textarea>
 
-<button>Send</button>
+<button type="submit">Send Message</button>
 
 </form>
+
+</div>
+
+</div>
 
 </section>
 
 <!-- FAQ -->
 
-<section class="faq">
+<section id="faq" class="faq light-section">
 
 <h2>FREQUENTLY ASKED QUESTIONS</h2>
 
@@ -246,17 +551,64 @@ IBAN: IE91 AIBK
 
 <div>
 <h3>Who can participate?</h3>
-<p>Everyone is welcome.</p>
+<p>Everyone is welcome! People of all ages,<br>
+churches, and denominations can join the <br>
+march.Families, youth groups, and<br>
+individuals are all encouraged to attend.
+</p>
 </div>
 
 <div>
-<h3>Is there a fee?</h3>
-<p>No participation is free.</p>
+<h3>Is there a fee to participate?</h3>
+<p>No, participation is free! However there will<br>
+be  an opportunity to donate on the day as<br>
+well as online donations.
+</p>
 </div>
 
 <div>
-<h3>Will there be safety measures?</h3>
-<p>Yes there will be volunteers and stewards.</p>
+<h3>Will there be toilets at city hall?</h3>
+<p>Yes, there will be multiple portable toilets<br>
+in the vicinity of City Hall.</p>
+</div>
+
+<div>
+<h3>Are there ACCOMMODATIONS<br>
+for the disabled /<br>
+elderly?</h3>
+<p>There will be a limited seating area in front<br>
+of the stage designated for the disabled and<br>
+the elderly. Please arrive at City Hall from<br>
+2.30pm to ensure seating.</p>
+</div>
+
+<div>
+<h3>Will there be health<br>
+& safety measures in<br>
+place? </h3>
+<p>Yes, trained marshalls will be<br>
+present throughout the march.<br>
+Qualified ambulance paramedics will<br>
+be onsite to provide medical<br>
+assistance if required.</p>
+</div>
+
+
+<div>
+<h3>where can I get food /<br>REFRESHMENTS?</h3>
+<p>Yes, there will be food trucks at the Ozone<br>
+Complex of Ormeau Park. At City Hall there<br>
+are a variety of cafes and shops.</p>
+</div>
+
+
+<div>
+<h3>will there be parking at<br>
+ormeau Park</h3>
+<p>Yes, but you will need to download a<br>
+parking permit and print it off displaying it<br>
+on your windshield on the event day. You<br>
+can print it here</p>
 </div>
 
 </div>
@@ -271,11 +623,11 @@ IBAN: IE91 AIBK
 
 <h2>MARCH FOR JESUS</h2>
 
-<div>
-<a>Tiktok</a>
-<a>Facebook</a>
-<a>Whatsapp</a>
-<a>Instagram</a>
+<div class="social-links">
+<a href="https://www.tiktok.com/@marchforjesusireland?_r=1&_t=ZN-94ZvzMDhaGk" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-tiktok"></i><span>Tiktok</span></a>
+<a href="https://www.facebook.com/share/1CZsf5bCWk/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook-f"></i><span>Facebook</span></a>
+<a href="https://chat.whatsapp.com/G6m8cG5FMAm8tozPNGQFvW" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i><span>Whatsapp</span></a>
+<a href="https://www.instagram.com/marchforjesusireland?igsh=aHI0dGxtOTRkcDhj" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i><span>Instagram</span></a>
 </div>
 
 <div>
