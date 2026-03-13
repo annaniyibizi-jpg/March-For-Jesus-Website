@@ -33,6 +33,15 @@ function updateCountdown() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
+	document.querySelectorAll("img").forEach(function (img, index) {
+		if (!img.hasAttribute("loading")) {
+			img.setAttribute("loading", index < 2 ? "eager" : "lazy");
+		}
+		if (!img.hasAttribute("decoding")) {
+			img.setAttribute("decoding", "async");
+		}
+	});
+
 	const menuToggle = document.querySelector(".menu-toggle");
 	const menu = document.querySelector(".menu");
 
