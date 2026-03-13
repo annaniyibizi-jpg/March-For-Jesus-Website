@@ -391,9 +391,8 @@ color:#4D0921;
 
 .about-main {
   position: relative;
-  width: 420px;
-  max-width: 100%;
-  overflow: hidden;
+  width: min(420px, 100%);
+  margin: 0 auto;
 }
 
 /* centre image */
@@ -408,7 +407,8 @@ color:#4D0921;
 
 .about-overlay {
   position: absolute;
-  width: 220px;
+  width: 40%;
+  max-width: 180px;
   border: 14px solid #e8decc;
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
 }
@@ -416,16 +416,18 @@ color:#4D0921;
 /* top left image */
 
 .top-left {
-  top: -30px;
-  left: -30px;
+  top: -20px;
+  left: 0;
+  transform: translateX(-20%);
   z-index: 3;
 }
 
 /* bottom right image */
 
 .bottom-right {
-  bottom: -30px;
-  right: -30px;
+  bottom: -20px;
+  right: 0;
+  transform: translateX(20%);
   z-index: 1;
 }
 
