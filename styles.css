@@ -159,7 +159,7 @@ color:#4D0921;
 /* Hero Section */
 .hero {
   height: 90vh;
-  background: url('images/MFJ%20New%20Edits/home.jpg') center/cover no-repeat;
+  background: url('images/mfj/home.jpg') center/cover no-repeat;
   position: relative;
   display: flex;
   align-items: center;
@@ -560,7 +560,7 @@ color:#4D0921;
 
 /* Contact Section */
 .contact {
-  background: url('images/MFJ%20New%20Edits/contact.jpg') center/cover no-repeat;
+  background: url('images/mfj/contact.jpg') center/cover no-repeat;
   position: relative;
   padding: 140px 8%;
 }
