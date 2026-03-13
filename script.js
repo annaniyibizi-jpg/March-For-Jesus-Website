@@ -44,8 +44,28 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	const menuToggle = document.querySelector(".menu-toggle");
 	const menu = document.querySelector(".menu");
+	const submenuParents = document.querySelectorAll(".menu .has-submenu > a");
 
 	if (menuToggle && menu) {
+		submenuParents.forEach(function (toggle) {
+			toggle.addEventListener("click", function (event) {
+				if (window.innerWidth > 900) {
+					return;
+				}
+				event.preventDefault();
+				const parent = toggle.parentElement;
+				if (!parent) {
+					return;
+				}
+				document.querySelectorAll(".menu .has-submenu.open").forEach(function (item) {
+					if (item !== parent) {
+						item.classList.remove("open");
+					}
+				});
+				parent.classList.toggle("open");
+			});
+		});
+
 		menuToggle.addEventListener("click", function () {
 			const isOpen = menu.classList.toggle("is-open");
 			menuToggle.classList.toggle("is-active", isOpen);
@@ -54,10 +74,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
 		menu.querySelectorAll("a").forEach(function (link) {
 			link.addEventListener("click", function () {
+				if (window.innerWidth <= 900 && link.parentElement && link.parentElement.classList.contains("has-submenu")) {
+					return;
+				}
 				if (window.innerWidth <= 900) {
 					menu.classList.remove("is-open");
 					menuToggle.classList.remove("is-active");
 					menuToggle.setAttribute("aria-expanded", "false");
+					document.querySelectorAll(".menu .has-submenu.open").forEach(function (item) {
+						item.classList.remove("open");
+					});
 				}
 			});
 		});
@@ -67,6 +93,9 @@ document.addEventListener("DOMContentLoaded", function () {
 				menu.classList.remove("is-open");
 				menuToggle.classList.remove("is-active");
 				menuToggle.setAttribute("aria-expanded", "false");
+				document.querySelectorAll(".menu .has-submenu.open").forEach(function (item) {
+					item.classList.remove("open");
+				});
 			}
 		});
 	}

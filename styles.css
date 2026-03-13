@@ -152,6 +152,10 @@ color:#4D0921;
   display: block;
 }
 
+.dropdown.open .dropdown-menu {
+  display: block;
+}
+
 
 
 /* Hero Section */
@@ -803,7 +807,7 @@ background:#8a0023;
   }
 
   .dropdown-menu {
-    display: block;
+    display: none;
     position: static;
     min-width: 100%;
     box-shadow: none;
